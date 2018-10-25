@@ -1,0 +1,25 @@
+.login-container {
+  background: white;
+  box-shadow: 0 1px 2px rgba(25, 25, 25, 0.2);
+  padding: 40px;
+}
+
+input,
+button {
+  width: 100%;
+  border-radius: 4px;
+  height: 40px;
+}
+
+input {
+  border: 1px solid black;
+  padding-left: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
