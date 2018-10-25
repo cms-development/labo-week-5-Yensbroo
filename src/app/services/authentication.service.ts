@@ -13,7 +13,7 @@ export class AuthenticationService {
     return this.http.post(this.apiURL, data);
   }
 
-  public getUser(id): Observable<any> {
-    return this.http.get();
-  }
+  // public getUser(id): Observable<any> {
+  //   return this.http.get();
+  // }
 }
