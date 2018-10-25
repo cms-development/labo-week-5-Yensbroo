@@ -12,4 +12,8 @@ export class AuthenticationService {
   public login(data): Observable<any> {
     return this.http.post(this.apiURL, data);
   }
+
+  public getUser(id): Observable<any> {
+    return this.http.get();
+  }
 }
