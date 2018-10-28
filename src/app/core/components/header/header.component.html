@@ -1,3 +1,15 @@
-<p>
-  header works!
-</p>
+<nav>
+  <div class="container">
+    <div class="menu-logo">
+      <a href=""><img class="steve" src="../../../../assets/img/steve.png" alt=""></a>
+    </div>
+    <div class="menu-links">
+      <ul>
+        <li><a routerLink="/">Artikels</a></li>
+        <li><a routerLink="login" *ngIf="!isAuthenticated">login</a></li>
+        <li><a routerLink="/" *ngIf="isAuthenticated">Maak een artikel</a></li>
+        <li><a (click)="logout()" *ngIf="isAuthenticated">logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

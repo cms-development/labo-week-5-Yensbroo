@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import * as JWT from "jwt-decode";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-header",
@@ -7,14 +8,19 @@ import * as JWT from "jwt-decode";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  isAuthenticated: Boolean = false;
 
   ngOnInit() {
-    this.getUser();
+    this.setUser();
   }
 
-  getUser() {
-    const token = localStorage.getItem("access_token");
-    const decoded = JWT(token);
+  setUser() {
+    if (localStorage.getItem("access_token")) {
+      this.isAuthenticated = true;
+    }
+  }
+
+  logout() {
+    localStorage.removeItem("access_token");
   }
 }

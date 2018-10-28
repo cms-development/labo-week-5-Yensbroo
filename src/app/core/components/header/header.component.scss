@@ -1,0 +1,22 @@
+nav {
+  border-bottom: 1px solid #262626;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.steve {
+  width: 65px;
+}
+
+.menu-links ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-links a {
+  text-decoration: none;
+  margin-left: 20px;
+}
