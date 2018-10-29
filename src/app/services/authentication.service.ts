@@ -13,6 +13,12 @@ export class AuthenticationService {
     return this.http.post(this.apiURL, data);
   }
 
+  loadToken() {
+    const token = localStorage.getItem("access_token");
+
+    return token;
+  }
+
   // public getUser(id): Observable<any> {
   //   return this.http.get();
   // }

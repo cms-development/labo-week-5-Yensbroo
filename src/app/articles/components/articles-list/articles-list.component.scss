@@ -1,0 +1,33 @@
+app-articles-list .container {
+  margin-top: 40px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.article-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  border-radius: 4px;
+
+  .article-title {
+    margin-bottom: 20px;
+
+    a {
+      color: orange;
+      text-decoration: none;
+    }
+  }
+}
+
+.article-body {
+  height: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.article-body p {}

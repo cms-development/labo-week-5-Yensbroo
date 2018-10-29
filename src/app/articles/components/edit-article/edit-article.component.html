@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-12">
+      <div class="edit-article-container">
+        <h1>Bewerk artikel</h1>
+        <form>
+          <div class="form-group">
+            <label for="title">Titel</label><br>
+            <input type="text" name="title" [(ngModel)]="article?.attributes.title" required minlength="4" #title="ngModel">
+            <div *ngIf="title.invalid && (title.dirty || title.touched)">
+              <div class="error" *ngIf="title.errors.required">Een titel is verplicht</div>
+              <div class="error" *ngIf="title.errors.minlength">Een titel moet minstens uit 4 karakters bestaan</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="body">Body</label><br>
+            <textarea name="body" [(ngModel)]="article?.attributes.body.value" #body="ngModel" required minlength="10">{{article?.attributes.body}}</textarea>
+            <div *ngIf="body.invalid && (body.dirty || body.touched)">
+              <div class="error" *ngIf="body.errors.required">Een body is verplicht</div>
+              <div class="error" *ngIf="body.errors.minlength">Een body moet minstens uit 10 karakters bestaan</div>
+            </div>
+          </div>
+          <button (click)="editArticle()">Bijwerken</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

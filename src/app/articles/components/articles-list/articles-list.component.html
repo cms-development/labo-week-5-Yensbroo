@@ -1,7 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-9" *ngFor="let article of articles">
-      <p>{{article.title}}</p>
+    <h1 class="col-lg-12">Artikels</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-6" *ngFor="let article of articles">
+      <div class="article-card">
+        <div class="article-title">
+          <h4><a [routerLink]="['/artikel', article.id]">{{article.attributes.title}}</a></h4>
+        </div>
+        <div class="article-body" [innerHTML]="article.attributes.body.value">
+
+        </div>
+      </div>
     </div>
   </div>
 </div>

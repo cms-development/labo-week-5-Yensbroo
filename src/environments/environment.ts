@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    baseURL: "http://localhost:8888/",
+    endpoints: {
+      article: "jsonapi/node/article",
+      auth: "oauth/token",
+      file: "jsonapi/file/file"
+    }
+  }
 };
 
 /*

@@ -1,0 +1,50 @@
+.container {
+  padding-top: 40px;
+
+  .editArticle {
+    width: 123px;
+
+    color: orange;
+  }
+
+  .removeArticle {
+    width: 138px;
+    color: red;
+  }
+
+  .editArticle,
+  .removeArticle {
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    background: white;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  .article-detail-card {
+    background: white;
+    padding: 40px;
+    border-radius: 4px;
+
+    .article-detail-title {
+      margin-bottom: 20px;
+
+      h3 {
+        color: grey;
+      }
+    }
+
+    .article-detail-image {
+      img {
+        width: 100%;
+      }
+
+    }
+
+    .article-detail-body {
+      margin-top: 20px;
+    }
+  }
+
+}

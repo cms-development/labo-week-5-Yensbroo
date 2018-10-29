@@ -1,5 +1,6 @@
 nav {
   border-bottom: 1px solid #262626;
+  background: white;
 }
 
 nav .container {
@@ -19,4 +20,10 @@ nav .container {
 .menu-links a {
   text-decoration: none;
   margin-left: 20px;
+  color: orange;
+}
+
+.logout {
+  cursor: pointer;
+
 }

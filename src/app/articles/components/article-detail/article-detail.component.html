@@ -1,3 +1,26 @@
-<p>
-  article-detail works!
-</p>
+<div class="container">
+  <div class="row" *ngIf="article?.included[0].attributes.uid == user.sub">
+    <div class="col-lg-12 d-flex justify-content-between">
+      <p class="editArticle" (click)="edit()">Bewerk artikel</p>
+      <p class="removeArticle" (click)="delete()">Verwijder artikel</p>
+    </div>
+  </div>
+  <div class="article-detail-card">
+    <div class="row">
+      <div class="col-lg-6  article-detail-title">
+        <h1 class="col-lg-12">{{article?.data.attributes.title}}</h1>
+        <h3 class="col-lg-12" *ngIf="article?.included[0]">geschreven door:
+          {{article?.included[0].attributes.name}}</h3>
+      </div>
+      <div class="col-lg-6  article-detail-image">
+        <img src="http://localhost:8888{{image?.url}}" alt="" class="img-fluid">
+      </div>
+    </div>
+    <div class="row article-detail-body">
+      <div class="col-lg-12">
+        <div class="article-detail-body" [innerHTML]="article?.data.attributes.body.value"></div>
+      </div>
+
+    </div>
+  </div>
+</div>

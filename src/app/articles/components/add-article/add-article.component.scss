@@ -1,0 +1,43 @@
+.edit-article-container {
+  padding: 40px;
+  background: white;
+  margin-top: 40px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+input {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+textarea {
+  height: 400px;
+  padding-top: 10px;
+  resize: none;
+  border-radius: 4px;
+}
+
+button {
+  height: 40px;
+  width: 200px;
+  cursor: pointer;
+  background: orange;
+  font-weight: bold;
+  color: white;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 20px;
+}

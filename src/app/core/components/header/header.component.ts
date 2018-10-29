@@ -10,6 +10,8 @@ import { Router } from "@angular/router";
 export class HeaderComponent implements OnInit {
   isAuthenticated: Boolean = false;
 
+  constructor(private router: Router) {}
+
   ngOnInit() {
     this.setUser();
   }
@@ -22,5 +24,6 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     localStorage.removeItem("access_token");
+    this.router.navigate(["/"]);
   }
 }
